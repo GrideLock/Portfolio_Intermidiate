@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--text-color);
+}
+:root{
+    --main-color: #2FB9A3;
+    --bg-color: #1F242D;
+    --second-bg-color: #37353E;
+    --text-color: #FFFFFF;
+    --disable-color: #C9CDCF;
+    --active-color: #08CB00;
+}
+body{
+   background: var(--bg-color);
+   padding-top: 80px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.logo{
+    left: 5px;
+    width: auto;
+    height: 150px;
+}
+nav a{
+    margin-left: 32px;
+    font-size: 32px;
+    font-weight: 500;
+    transition: .5s;
+}
+nav a:hover, nav a.active{
+    color: var(--main-color);
+}
+#ring-oss{
+    font-size: 35px;
+    font-weight: 500;
+    padding: 10px 35px;
+    border-radius: 15px;
+    outline: none;
+    border: 2px solid var(--main-color);
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: .5s;
+    margin-left: 40px;
+}
+#ring-oss:hover{
+    background: transparent;
+    color: var(--main-color);
+
+}
+#tjenester{
+    padding: 100px 10% 32px;
+    
+}
+.section-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: clamp(3.5rem, 10vh, 5.5rem);
+}
+#tjenester .section-container,
+#tjenester .section-container{
+    text-align: left;
+    margin-left: 0; 
+    padding-left: 0;
+    margin-top: 150px;
+}
+#tjenester .section-container{
+    padding-left: -20px;
+}
+.container-item img{
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+#section-header{
+    font-size: 45px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#smart-header{
+    display: block;
+    font-size: 45px;
+    color: var(--text-color);
+    margin: 10px 0 40px;
+    text-transform: uppercase;
+}
