@@ -15,7 +15,6 @@
 }
 body{
    background: var(--bg-color);
-   padding-top: 80px;
 }
 header{
     position: fixed;
@@ -26,7 +25,10 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
+    background: var(--bg-color);
+    overflow: hidden;
+    z-index: 100;
+
 }
 .logo{
     left: 5px;
@@ -39,6 +41,7 @@ nav a{
     font-weight: 500;
     transition: .5s;
 }
+
 nav a:hover, nav a.active{
     color: var(--main-color);
 }
@@ -59,41 +62,83 @@ nav a:hover, nav a.active{
     color: var(--main-color);
 
 }
-#tjenester{
-    padding: 100px 10% 32px;
-    
+.tjenester{
+    padding: 350px 10% 32px;
 }
-.section-container{
-    max-width: 1200px;
-    margin: 0 auto;
+
+.tjenester{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+.section-container h1{
     font-size: clamp(3.5rem, 10vh, 5.5rem);
+    margin-bottom: 20px;
 }
-#tjenester .section-container,
-#tjenester .section-container{
-    text-align: left;
-    margin-left: 0; 
-    padding-left: 0;
-    margin-top: 150px;
+.section-container h2{
+    display: inline-block;
+    font-size: 40px;
+    margin-top: -16px;
 }
-#tjenester .section-container{
-    padding-left: -20px;
+
+.section-container h2 span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 1.12px var(--main-color);
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text{
+    25%, 100%{
+        display: none;
+    }
+}
+.section-container h2 span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border: 2.2px solid var(--main-color);
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text{
+    10%,
+    100%{
+        width: 0;
+    }
+    70%,
+    90%{
+        width: 100%;
+
+    }
+}
+.p-text{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 250px;
+}
+.p-text .p1{
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.p-text .p2{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.container-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .container-item img{
-    max-width: 1000px;
+    min-width: 100%;
     width: 100%;
-    border-radius: 10px;
     height: auto;
-}
-#section-header{
-    font-size: 45px;
-    color: var(--main-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-#smart-header{
-    display: block;
-    font-size: 45px;
-    color: var(--text-color);
-    margin: 10px 0 40px;
-    text-transform: uppercase;
 }
