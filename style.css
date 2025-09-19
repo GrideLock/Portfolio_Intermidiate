@@ -62,11 +62,11 @@ nav a:hover, nav a.active{
     color: var(--main-color);
 
 }
-.tjenester{
+.hjem{
     padding: 350px 10% 32px;
 }
 
-.tjenester{
+.hjem{
     display: flex;
     align-items: center;
     gap: 80px;
@@ -141,4 +141,109 @@ nav a:hover, nav a.active{
     min-width: 100%;
     width: 100%;
     height: auto;
+}
+.tjenester{
+    padding-top: 100px 10%;
+}
+.tjenester h2{
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+.tjenester span{
+    font-size: 54px;
+    color: var(--main-color);
+}
+.tjen-boxes{
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.tjen-box p{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.tjen-box h3{
+    display: flex;
+    text-align: center;
+    font-size: 32px;
+    
+}
+.tjen-box{
+    height: 250px;
+    background: var(--main-color);
+    flex: 2;
+    border-radius: 25px;
+    display: flex;
+    font-size: 128px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.tjen-box:hover{
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+.tjen-box:hover > i{
+    color: var(--main-color);
+}
+.tjen-box:hover p{
+    display: flex;
+    text-align: center;
+
+}
+.tjen-box:hover h3{
+    display: none;
+}
+.om{
+    width: 60%;
+    height: 40vh;
+}
+.om-oss{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-left: 100px;
+}
+.om-oss h2{
+    font-size: 60px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.om-oss p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.om-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    margin-left: 100px;
+    gap: 35px;
+}
+.img-child img{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+}
+.img-child:hover{
+    opacity: .6;
+    background: var(--main-color);
+    
 }
