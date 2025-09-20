@@ -8,7 +8,7 @@
 :root{
     --main-color: #2FB9A3;
     --bg-color: #1F242D;
-    --second-bg-color: #37353E;
+    --second-bg-color: #2A2F3A;
     --text-color: #FFFFFF;
     --disable-color: #C9CDCF;
     --active-color: #08CB00;
@@ -189,6 +189,7 @@ nav a:hover, nav a.active{
 .tjen-box:hover{
     background: transparent;
     border: 2px solid var(--main-color);
+    transform: translateY(-10px);
 }
 .tjen-box:hover > i{
     color: var(--main-color);
@@ -245,5 +246,70 @@ nav a:hover, nav a.active{
 .img-child:hover{
     opacity: .6;
     background: var(--main-color);
-    
+}
+.anmeldelser{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.anmeldelser{
+    text-align: center;
+    padding: 400px 10% 32px; 
+}
+.anmeldelser h2{
+    font-size: 64px;
+    font-weight: 600;
+}
+.anmeldelser .top-p{
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.parent-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.child-container{
+    width: 350px;
+    height: 350px;
+    background: var(--second-bg-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    transition: transform .3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.child-container:hover{
+    transform: translateY(-10px);
+}
+.child-container img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+   display: none;
+}
+.child-container:hover img{
+    display: block;
+}
+.child-container:hover p{
+    display: none;
+}
+.child-container:hover h2{
+    display: flex;
+    font-size: 25px;
+    color: var(--main-color);
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7px;
+}
+.child-container h2{
+   display: none;
 }
